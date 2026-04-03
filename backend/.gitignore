@@ -1,0 +1,15 @@
+# Ignore specific folders
+node_modules/
+dist/
+build/
+
+# Ignore specific file types
+*.log
+*.tmp
+*.exe
+
+# Ignore environment variables/secrets
+.env
+
+# Allow a specific file even if its type is ignored
+!important.log

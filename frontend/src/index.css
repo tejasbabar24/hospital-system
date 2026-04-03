@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: "CarmenSans";
+  src: url("./assets/fonts/carmen-sans-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+
+  /* fonts */
+    --font-sans: "CarmenSans", "Poppins", sans-serif;
+
+
+
+  /* 🔹 Primary (Teal Brand) */
+  --color-primary-50: oklch(0.97 0.02 200);
+  --color-primary-100: oklch(0.93 0.04 200);
+  --color-primary-200: oklch(0.85 0.08 200);
+  --color-primary-300: oklch(0.75 0.10 200);
+  --color-primary-400: oklch(0.65 0.12 200);
+  --color-primary-500: oklch(0.45 0.10 200); /* base */
+  --color-primary-600: oklch(0.40 0.09 200);
+  --color-primary-700: oklch(0.35 0.08 200);
+  --color-primary-800: oklch(0.30 0.07 200);
+  --color-primary-900: oklch(0.22 0.05 200);
+
+  /* 🔹 Secondary (Soft Teal) */
+  --color-secondary-50: oklch(0.98 0.01 190);
+  --color-secondary-100: oklch(0.95 0.02 190);
+  --color-secondary-200: oklch(0.90 0.04 190);
+  --color-secondary-300: oklch(0.80 0.05 190);
+  --color-secondary-400: oklch(0.70 0.06 190);
+  --color-secondary-500: oklch(0.60 0.07 190);
+  --color-secondary-600: oklch(0.50 0.06 190);
+  --color-secondary-700: oklch(0.40 0.05 190);
+  --color-secondary-800: oklch(0.30 0.04 190);
+  --color-secondary-900: oklch(0.22 0.03 190);
+
+  /* 🔹 Neutral (Card / Glass UI) */
+  --color-neutral-50: oklch(0.98 0.01 180);
+  --color-neutral-100: oklch(0.95 0.01 180);
+  --color-neutral-200: oklch(0.90 0.02 180);
+  --color-neutral-300: oklch(0.82 0.02 180);
+  --color-neutral-400: oklch(0.72 0.02 180);
+  --color-neutral-500: oklch(0.60 0.02 180); /* card base */
+  --color-neutral-600: oklch(0.50 0.02 180);
+  --color-neutral-700: oklch(0.40 0.02 180);
+  --color-neutral-800: oklch(0.30 0.02 180);
+  --color-neutral-900: oklch(0.22 0.02 180);
+
+  /* 🔹 Accent (Light Background / Text) */
+  --color-accent-50: oklch(1 0 0);
+  --color-accent-100: oklch(0.98 0.01 180);
+  --color-accent-200: oklch(0.95 0.01 180);
+  --color-accent-300: oklch(0.92 0.02 180);
+  --color-accent-400: oklch(0.88 0.02 180);
+  --color-accent-500: oklch(0.82 0.02 180);
+  --color-accent-600: oklch(0.72 0.02 180);
+  --color-accent-700: oklch(0.62 0.02 180);
+  --color-accent-800: oklch(0.52 0.02 180);
+  --color-accent-900: oklch(0.42 0.02 180);
+
+  /* 🔹 Button (Action) */
+  --color-button-50: oklch(0.97 0.01 200);
+  --color-button-100: oklch(0.92 0.02 200);
+  --color-button-200: oklch(0.85 0.04 200);
+  --color-button-300: oklch(0.75 0.06 200);
+  --color-button-400: oklch(0.65 0.08 200);
+  --color-button-500: oklch(0.30 0.07 200); /* base dark */
+  --color-button-600: oklch(0.26 0.06 200);
+  --color-button-700: oklch(0.22 0.05 200);
+  --color-button-800: oklch(0.18 0.04 200);
+  --color-button-900: oklch(0.14 0.03 200);
+}
+
+
+body {
+  font-family: var(--font-sans);
+}
