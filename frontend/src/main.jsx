@@ -4,32 +4,43 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginPage from './pages/LoginPage.jsx'
+import { Provider} from 'react-redux'
+import store from "./store/store.js"
+import ProtectedRoute from './utils/protectedRoute'
+import Dashboard from './pages/Dashboard.jsx'
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,   // 👈 Main Layout here
-    // errorElement: <NotFound />,
+    element: <App />, // layout with Outlet
     children: [
-      {
-        index: true,       // 👈 default route "/"
-        element: <LoginPage />,
+      // {
+      //   index: true,
+      //   element: <LandingPage />, // ✅ now root is landing
+      // },
+      { index:true,
+        // path: "login",
+        element: <LoginPage />, // ✅ separate route
       },
-      // {
-      //   path: "about",
-      //   element: <About />,
-      // },
-      // {
-      //   path: "contact",
-      //   element: <Contact />,
-      // },
+
+      // 🔐 Protected routes
+      {
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: "dashboard",
+            element: <Dashboard />,
+          },
+        ],
+      },
     ],
   },
-  
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  <Provider store={ store }>
     <RouterProvider router={router} />
+  </Provider>
   </StrictMode>,
 )

@@ -3,14 +3,7 @@ config({ path: "./.env" }); // ✅ FIRST
 
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
-import cors from "cors";
 
-// ✅ middleware after env loaded
-app.use(
-  cors({
-    origin:"*",
-  })
-);
 
 const PORT = process.env.PORT || 5000;
 

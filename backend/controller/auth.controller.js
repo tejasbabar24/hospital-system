@@ -1,4 +1,4 @@
-import User from "../models/User.js";
+import User from "../schema/userSchema.js";
 import jwt from "jsonwebtoken";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
@@ -13,7 +13,7 @@ const generateToken = (id) => {
 
 // 📝 Register User
 export const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password , phone } = req.body;
 
   if (!name || !email || !password) {
     throw new ApiError(400, "All fields are required");
@@ -29,6 +29,7 @@ export const registerUser = asyncHandler(async (req, res) => {
     name,
     email,
     password,
+    phone
   });
 
   const token = generateToken(user._id);
