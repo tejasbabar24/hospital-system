@@ -33,7 +33,7 @@ const LoginForm = ({ switchForm }) => {
     if (token) {
       navigate("/dashboard"); // change route
     }
-  }, [token]);
+  }, [token, navigate]);
   
   return (
     <div className="w-full max-w-[420px]">

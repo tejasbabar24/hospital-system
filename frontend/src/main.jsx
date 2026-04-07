@@ -14,24 +14,15 @@ export const router = createBrowserRouter([
     path: "/",
     element: <App />, // layout with Outlet
     children: [
-      // {
-      //   index: true,
-      //   element: <LandingPage />, // ✅ now root is landing
-      // },
-      { index:true,
-        // path: "login",
+      { 
+        index: true,
         element: <LoginPage />, // ✅ separate route
       },
 
       // 🔐 Protected routes
       {
-        element: <ProtectedRoute />,
-        children: [
-          {
-            path: "dashboard",
-            element: <Dashboard />,
-          },
-        ],
+        path: "dashboard",
+        element: <ProtectedRoute><Dashboard /></ProtectedRoute>,
       },
     ],
   },

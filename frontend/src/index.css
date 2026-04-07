@@ -16,7 +16,7 @@
     --font-sans: "CarmenSans", "Poppins", sans-serif;
 
 
-
+  --color-gradient-header: linear-gradient(135deg, oklch(54.1% 0.145 194.5), oklch(76.7% 0.16 194.5));
   /* 🔹 Primary (Teal Brand) */
   --color-primary-50: oklch(0.97 0.02 200);
   --color-primary-100: oklch(0.93 0.04 200);
